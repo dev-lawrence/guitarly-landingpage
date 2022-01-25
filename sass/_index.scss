@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap');
+
+// CORE STYLES
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+// FONTS
+$font-family: 'Inter', sans-serif;
+
+body {
+  text-size-adjust: 100%;
+  font-family: $font-family;
+  line-height: 1.6;
+  background-color: $bg-clr;
+
+  &.fixed {
+    overflow: hidden;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+a,
+span {
+  display: inline-block;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  padding: 0 1rem;
+}
+
+// HEADER SECTION
+.header {
+  transition: background-color 0.3s ease-in;
+
+  &__content {
+    position: relative;
+    @include flex(center, space-between);
+    padding: 1.5rem 1rem;
+  }
+
+  &__logo {
+    width: 100px;
+  }
+
+  &.show {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    z-index: 999;
+    // transform: translateY(-200%);
+  }
+
+  &.show &__content {
+    padding: 1rem;
+  }
+
+  //   &.inView {
+  //     transform: translateY(0);
+  //     transition: all 0.5s ease-in;
+  //   }
+
+  //   &.inView .nav {
+  //     position: absolute;
+  //     top: 0;
+  //     height: 100vh;
+  //     width: 100%;
+  //   }
+
+  // MENU BAR
+  .toggle-menu {
+    font-size: 1.3rem;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  .toggle-menu i.showNav::before {
+    content: '\f00d';
+    color: $white;
+  }
+}
+
+// NAV
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  @include flex(center, center);
+  background-color: $sec-clr;
+  clip-path: circle(100px at 90% -30%);
+  -webkit-clip-path: circle(100px at 90% -30%);
+  transition: all 0.7s ease-out;
+
+  &.showNav {
+    clip-path: circle(15000px at 90% -140%);
+    -webkit-clip-path: circle(1500px at 90% -10%);
+  }
+
+  &__menu {
+    text-transform: capitalize;
+    text-align: center;
+
+    li {
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      color: $white;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+// HERO SECTION
+.hero {
+  min-height: 70vh;
+
+  &__content {
+    height: 70vh;
+    @include flex(center, center);
+    text-align: center;
+  }
+
+  &__text {
+    h1 {
+      line-height: 1.1;
+      font-size: 2.3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: $fs-small;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

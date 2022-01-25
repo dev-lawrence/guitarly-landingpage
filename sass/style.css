@@ -1,1 +1,154 @@
-/* No CSS */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap");
+.btn {
+  text-transform: capitalize;
+  background-color: #2ec5ce;
+  color: #0b0d17;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #0b0d17;
+  color: #fff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  text-size-adjust: 100%;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  background-color: #d9e8ef;
+}
+
+body.fixed {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+a,
+span {
+  display: inline-block;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  padding: 0 1rem;
+}
+
+.header {
+  transition: background-color 0.3s ease-in;
+}
+
+.header__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+}
+
+.header__logo {
+  width: 100px;
+}
+
+.header.show {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 999;
+}
+
+.header.show .header__content {
+  padding: 1rem;
+}
+
+.header .toggle-menu {
+  font-size: 1.3rem;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.header .toggle-menu i.showNav::before {
+  content: '\f00d';
+  color: #fff;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0b0d17;
+  clip-path: circle(100px at 90% -30%);
+  -webkit-clip-path: circle(100px at 90% -30%);
+  transition: all 0.7s ease-out;
+}
+
+.nav.showNav {
+  clip-path: circle(15000px at 90% -140%);
+  -webkit-clip-path: circle(1500px at 90% -10%);
+}
+
+.nav__menu {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.nav__menu li {
+  margin-bottom: 1.5rem;
+}
+
+.nav__menu a {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.hero {
+  min-height: 70vh;
+}
+
+.hero__content {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero__text h1 {
+  line-height: 1.1;
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero__text p {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}

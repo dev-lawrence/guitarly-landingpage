@@ -1,0 +1,21 @@
+@mixin flex($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+.btn {
+  text-transform: capitalize;
+  background-color: $pry-clr;
+  color: $sec-clr;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  font-size: $fs-small;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $sec-clr;
+    color: $white;
+  }
+}
