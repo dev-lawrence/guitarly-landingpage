@@ -125,25 +125,29 @@ li {
 }
 
 .hero {
-  min-height: 70vh;
+  overflow: hidden;
 }
 
-.hero__content {
-  height: 70vh;
+.hero__img img {
+  border-radius: 0.4rem;
+  margin-bottom: 3rem;
+}
+
+.hero__text {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   text-align: center;
 }
 
 .hero__text h1 {
-  line-height: 1.1;
+  line-height: 1.2;
   font-size: 2.3rem;
   font-weight: 800;
   margin-bottom: 1rem;
 }
 
 .hero__text p {
-  font-size: 0.9rem;
   margin-bottom: 1.5rem;
 }
