@@ -2,17 +2,12 @@
 .btn {
   text-transform: capitalize;
   background-color: #2ec5ce;
-  color: #0b0d17;
-  padding: 0.5rem 1rem;
+  color: #fff;
+  padding: 0.7rem 1rem;
   border-radius: 0.2rem;
   font-size: 0.9rem;
   font-weight: 500;
   transition: background-color 0.2s ease-in-out;
-}
-
-.btn:hover {
-  background-color: #0b0d17;
-  color: #fff;
 }
 
 *,

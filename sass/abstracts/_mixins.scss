@@ -7,15 +7,10 @@
 .btn {
   text-transform: capitalize;
   background-color: $pry-clr;
-  color: $sec-clr;
-  padding: 0.5rem 1rem;
+  color: $white;
+  padding: 0.7rem 1rem;
   border-radius: 0.2rem;
   font-size: $fs-small;
   font-weight: 500;
   transition: background-color 0.2s ease-in-out;
-
-  &:hover {
-    background-color: $sec-clr;
-    color: $white;
-  }
 }
