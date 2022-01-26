@@ -4,8 +4,11 @@ const nav = document.querySelector('.nav');
 const navLinks = nav.querySelectorAll('li');
 const menuBtn = document.querySelector('.menu-icon');
 const icon = menuBtn.querySelector('i');
+const testiCards = document.querySelectorAll('.testimonial__card');
+const indicators = document.querySelector('.indicators');
+const dots = Array.from(indicators.children);
 
-console.log(navLinks);
+let activeSlide = 1;
 
 // add bg color to the header on scroll
 const stickOnScroll = () => {
@@ -17,13 +20,6 @@ const stickOnScroll = () => {
   } else {
     header.classList.remove('show');
   }
-
-  // add the header
-  //   if (scroll > 300) {
-  //     header.classList.add('inView');
-  //   } else {
-  //     header.classList.remove('inView');
-  //   }
 };
 
 // show nav when the menu bar is clicked
@@ -37,6 +33,27 @@ const showMenu = () => {
 navLinks.forEach((link) => {
   link.addEventListener('click', () => {
     showMenu();
+  });
+});
+
+// manual navigation
+const manualNav = (manual) => {
+  testiCards[manual].classList.add('current');
+  dots[manual].classList.add('current');
+};
+
+// move card on when each dot is clicked
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    //    get the current card
+    const current = document.querySelector('.current');
+    // remove the current class from the current card
+    current.classList.remove('current');
+    // add the current class to the next card
+    // testiCards[index].classList.add('current');
+    // activeSlide = index;
+    manualNav(index);
+    activeSlide = index;
   });
 });
 

@@ -46,6 +46,12 @@ li {
   list-style: none;
 }
 
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
 .container {
   padding: 0 1rem;
 }
@@ -124,10 +130,6 @@ li {
   font-size: 1.4rem;
 }
 
-.hero {
-  overflow: hidden;
-}
-
 .hero__img img {
   border-radius: 0.4rem;
   margin-bottom: 3rem;
@@ -142,12 +144,200 @@ li {
 }
 
 .hero__text h1 {
-  line-height: 1.2;
-  font-size: 2.3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 1rem;
 }
 
 .hero__text p {
   margin-bottom: 1.5rem;
+}
+
+.achieve {
+  background-color: #0b0d17;
+  color: #fff;
+  margin-top: 5rem;
+}
+
+.achieve__content {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.achieve__content .col-1 {
+  margin-bottom: 2rem;
+}
+
+.achieve__content .col-1 h2 {
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+.achieve__content .col-2 span {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.achieve__content .col-2 p {
+  font-size: 0.9rem;
+}
+
+.achieve__content .col-2 .m-b {
+  margin-bottom: 2rem;
+}
+
+.about {
+  margin-top: 5rem;
+}
+
+.about__content {
+  text-align: center;
+}
+
+.about__content .img {
+  overflow: hidden;
+  border-radius: 0.4rem;
+}
+
+.about__content .img img {
+  transition: transform 0.4s ease-in-out;
+}
+
+.about__content .img img:hover {
+  transform: scale(1.1);
+}
+
+.about__text {
+  margin-top: 3rem;
+}
+
+.about__text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about__text p:not(:last-of-type) {
+  margin-bottom: 1.5rem;
+}
+
+.about__btn {
+  margin-top: 1.5rem;
+}
+
+.lesson {
+  background-color: #0b0d17;
+  margin-top: 5rem;
+}
+
+.lesson__content {
+  padding: 5rem 0;
+  color: #fff;
+  text-align: center;
+}
+
+.lesson__title {
+  margin-bottom: 2.5rem;
+}
+
+.lesson__title h2 {
+  font-size: 2.2rem;
+}
+
+.lesson__text:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.lesson__text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.testimonial {
+  margin-top: 5rem;
+  position: relative;
+}
+
+.testimonial img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin: 0 auto 0.5rem;
+  object-fit: cover;
+}
+
+.testimonial__content {
+  text-align: center;
+}
+
+.testimonial__title {
+  margin-bottom: 2.5rem;
+}
+
+.testimonial__title h2 {
+  font-size: 2.2rem;
+}
+
+.testimonial__cards {
+  overflow: hidden;
+  height: 300px;
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.testimonial__card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.6s ease-in-out;
+}
+
+.testimonial__card.current {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.testimonial__card--text {
+  position: relative;
+  background-color: #2ec5ce;
+  color: #0b0d17;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+
+.testimonial__card--text h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial__card--text p {
+  font-size: 0.9rem;
+}
+
+.testimonial__card--text::after {
+  content: '';
+  position: absolute;
+  bottom: -2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-width: 20px;
+  border-color: #2ec5ce transparent transparent transparent;
+}
+
+.testimonial .indicators button {
+  cursor: pointer;
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: 0 0.1rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #2ec5ce;
+}
+
+.footer {
+  margin-top: 5rem;
 }
