@@ -7,6 +7,7 @@ const icon = menuBtn.querySelector('i');
 const testiCards = document.querySelectorAll('.testimonial__card');
 const indicators = document.querySelector('.indicators');
 const dots = Array.from(indicators.children);
+const upArrow = document.querySelector('.up-arrow');
 let activeCard = 1;
 
 // add bg color to the header on scroll
@@ -19,6 +20,22 @@ const stickOnScroll = () => {
   } else {
     header.classList.remove('show');
   }
+};
+
+// show up arrow
+const goToTop = () => {
+  const scroll = window.scrollY;
+
+  if (scroll > 2000) {
+    upArrow.classList.add('showArrow');
+  } else {
+    upArrow.classList.remove('showArrow');
+  }
+};
+
+// back to top
+const backToTop = () => {
+  window.scrollTo(0, 0);
 };
 
 // show nav when the menu bar is clicked
@@ -58,29 +75,7 @@ indicators.addEventListener('click', (e) => {
   activeCard = targetIndex;
 });
 
-// move card on when each dot is clicked
-// const dotNav = (dot, index) => {
-//   dot.addEventListener('click', () => {
-//     //    get the current card and current dot
-//     const current = document.querySelector('.current');
-//     const currentDot = document.querySelector('.active');
-//     // remove the current class from the current card
-//     current.classList.remove('current');
-//     // remove the currentDot class from the current dot
-//     currentDot.classList.remove('active');
-//     // add the current class to the next card
-//     manualNav(index);
-//     activeCard = index;
-
-//     const targetDot = dots.findIndex((d) => d === dotNav);
-//     console.log(targetDot);
-//   });
-// };
-
-// dots.forEach(dotNav);
-
 // autoplay navigation
-
 let repeat = () => {
   setInterval(() => {
     const current = document.querySelector('.current');
@@ -107,4 +102,6 @@ repeat();
 
 // event listeners
 window.addEventListener('scroll', stickOnScroll);
+window.addEventListener('scroll', goToTop);
+upArrow.addEventListener('click', backToTop);
 menuBtn.addEventListener('click', showMenu);

@@ -4,12 +4,20 @@
   justify-content: $justify;
 }
 
+@mixin grid($gtc) {
+  display: grid;
+  grid-template-columns: $gtc;
+}
+
+$border-radius: 0.4rem;
+
 .btn {
+  display: inline-block;
   text-transform: capitalize;
   background-color: $pry-clr;
   color: $white;
   padding: 0.7rem 1.5rem;
-  border-radius: 0.2rem;
+  border-radius: $border-radius;
   font-size: $fs-small;
   font-weight: 500;
   transition: background-color 0.2s ease-in-out;
