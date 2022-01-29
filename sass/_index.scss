@@ -92,18 +92,16 @@ a {
 .nav {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   height: 100vh;
   width: 100%;
   @include flex(center, center);
   background-color: $sec-clr;
-  clip-path: circle(100px at 90% -30%);
-  -webkit-clip-path: circle(100px at 90% -30%);
-  transition: all 0.7s ease-out;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
 
   &.showNav {
-    clip-path: circle(15000px at 90% -140%);
-    -webkit-clip-path: circle(1500px at 90% -10%);
+    transform: translateX(0);
   }
 
   &__menu {
