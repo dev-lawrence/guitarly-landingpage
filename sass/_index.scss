@@ -628,7 +628,8 @@ a {
   .nav {
     position: static;
     clip-path: unset;
-    -webkit-clip-path: unset;
+    transform: translateX(0);
+
     background-color: transparent;
     height: unset;
     justify-content: flex-end;
