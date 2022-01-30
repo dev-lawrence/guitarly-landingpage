@@ -432,10 +432,6 @@ a {
   transition: opacity 1s ease-in-out;
 }
 
-.footer .up-arrow.showArrow {
-  opacity: 1;
-}
-
 @media (min-width: 576px) {
   .container,
   .header__content {
@@ -616,6 +612,9 @@ a {
   }
   .achieve {
     margin-top: 0;
+  }
+  .footer .up-arrow.showArrow {
+    opacity: 1;
   }
 }
 

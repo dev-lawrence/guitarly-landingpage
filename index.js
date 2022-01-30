@@ -26,7 +26,7 @@ const stickOnScroll = () => {
 const goToTop = () => {
   const scroll = window.scrollY;
 
-  if (scroll > 2000) {
+  if (scroll > 2200) {
     upArrow.classList.add('showArrow');
   } else {
     upArrow.classList.remove('showArrow');

@@ -433,10 +433,6 @@ a {
     opacity: 0;
     transition: opacity 1s ease-in-out;
   }
-
-  .up-arrow.showArrow {
-    opacity: 1;
-  }
 }
 
 // MEDIA QURIES
@@ -675,6 +671,12 @@ a {
 
   .achieve {
     margin-top: 0;
+  }
+
+  .footer {
+    .up-arrow.showArrow {
+      opacity: 1;
+    }
   }
 }
 
